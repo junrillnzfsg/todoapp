@@ -1,0 +1,5 @@
+<section class="todoapp">
+    <todo-header name="vm.todoName" add="vm.onAdd(event, value)"></todo-header>
+    <todo-main list="vm.list" delete="vm.onDelete(index)" complete="vm.onComplete(index)" complete-all="vm.onCompleteAll()"></todo-main>
+    <todo-footer count="vm.displayTodoCount()" filter="vm.onFilter(category)" clear="vm.onClearCompleted(category)" category="vm.categoryType"></todo-footer>
+</section>

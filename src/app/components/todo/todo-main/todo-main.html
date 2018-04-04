@@ -1,0 +1,7 @@
+<section class="main">
+    <input id="toggle-all" class="toggle-all" type="checkbox" ng-click="vm.completeAll()">
+    <label for="toggle-all">Mark all as complete</label>
+    <ul class="todo-list">
+        <todo-item  ng-repeat="item in vm.list track by $index" item="item" complete="vm.complete({index: $index})" delete="vm.delete({index: $index})" index="$index"></todo-item>
+    </ul>
+</section>

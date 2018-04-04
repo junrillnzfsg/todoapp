@@ -1,0 +1,15 @@
+<footer class="footer" ng-class="{'hidden': vm.count() < 1  }">
+    <span class="todo-count"><strong>{{vm.count()}}</strong> item left</span>
+    <ul class="filters">
+        <li>
+            <a ng-class="{ 'selected': vm.category === 1 }" href="#" ng-click="vm.filter({category: 1})">All</a>
+        </li>
+        <li>
+            <a ng-class="{ 'selected': vm.category === 2 }" href="#" ng-click="vm.filter({category: 2})">Active</a>
+        </li>
+        <li>
+            <a ng-class="{ 'selected': vm.category === 3 }" href="#" ng-click="vm.filter({category: 3})">Completed</a>
+        </li>
+    </ul>
+    <button class="clear-completed" ng-click="vm.clear()">Clear completed</button>
+</footer>
